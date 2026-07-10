@@ -1,0 +1,15 @@
+{
+  "name": "token-lean",
+  "owner": {
+    "name": "hurttlocker",
+    "url": "https://o8.run"
+  },
+  "plugins": [
+    {
+      "name": "token-lean",
+      "source": "./",
+      "description": "The decisions-only orchestration discipline — run any agent fleet at frontier-orchestrator efficiency, on any model. One markdown skill, no dependencies.",
+      "category": "workflow"
+    }
+  ]
+}

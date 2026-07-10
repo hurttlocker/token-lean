@@ -1,0 +1,13 @@
+{
+  "name": "token-lean",
+  "description": "The decisions-only orchestration discipline — run any agent fleet at frontier-orchestrator efficiency, on any model.",
+  "version": "1.0.0",
+  "author": {
+    "name": "hurttlocker",
+    "url": "https://o8.run"
+  },
+  "homepage": "https://github.com/hurttlocker/token-lean",
+  "repository": "https://github.com/hurttlocker/token-lean",
+  "license": "MIT",
+  "keywords": ["orchestration", "agents", "token-efficiency", "context-management", "skill"]
+}
