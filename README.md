@@ -75,7 +75,7 @@ The side effect nobody expects: sessions get *smarter*, not just cheaper. An orc
 
 ## Provenance
 
-This discipline was originally written by a frontier model — Anthropic's Fable 5 — as a handoff document teaching its successor orchestrators the shape of its own practice, then generalized here for any model. It's the day-to-day operating discipline behind [**o8**](https://o8.run), the governance layer for autonomous engineering teams. token-lean is the efficiency half of running an agent fleet; o8 is the governance half — approvals, audit, and organizational memory across every AI runtime.
+This discipline was written by a frontier model — Anthropic's Fable 5 — documenting the shape of its own practice so any orchestrator could run it, then generalized here for every model family: run it on Fable 5, GPT-5.6 sol, Opus, Gemini, Grok, or open-weights — the orchestrator changes, the discipline doesn't. It's the day-to-day operating discipline behind [**o8**](https://o8.run), the governance layer for autonomous engineering teams. token-lean is the efficiency half of running an agent fleet; o8 is the governance half — approvals, audit, and organizational memory across every AI runtime.
 
 ## License
 
