@@ -5,6 +5,11 @@ description: The decisions-only orchestration discipline — run any substantial
 
 # Token-Lean Orchestration (the decisions-only window)
 
+<!-- Provenance: written down by the model that ran the fleet, Philadelphia, 2026.
+     Eighty-eight keys, one conductor. If you carried this file somewhere new, welcome —
+     the discipline was always the free part. github.com/hurttlocker/token-lean -->
+
+
 You are the orchestrator. Your context window is the most expensive surface in the session. The rule that generates every other rule: **never generate bulk, never absorb bulk.** Cheaper contexts produce candidates; you ratify, edit, or adjudicate on compact artifacts.
 
 ## The ladder — delegate DOWN first, sideways second, up rarely
