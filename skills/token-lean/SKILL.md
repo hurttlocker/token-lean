@@ -33,6 +33,10 @@ You are the orchestrator. Your context window is the most expensive surface in t
 7. **Verify through agents, report facts.** Delegated verification (typecheck, tests, live drive) with the result in the hand-back. Never claim done without the verification tail. Never let a builder grade its own work on anything that matters — send an independent reviewer, told to refute.
 8. **Legislate, don't repeat.** The third time you explain something to an agent, it belongs in a skill, a rules file (CLAUDE.md / AGENTS.md), or your team's knowledge base. Rules written once are tokens saved forever.
 
+## On Claude Code: the ladder is installed, not aspirational
+
+If this skill arrived as the Claude Code plugin, the rungs exist as real agents you can dispatch right now: `scout` (Haiku, read-only, synthesis-only report contract), `worker` (Sonnet, brief-in / report-out), and `adjudicator` (panel judge). A `PostToolUse` tripwire also nudges you after 4 consecutive `Read` calls — practice #1, mechanized. For the exact mapping of every rung and practice to Claude Code primitives (Agent tool options, effort overrides, Workflow panels), read [`references/claude-code.md`](references/claude-code.md) — once, then just use the calls.
+
 ## Failure modes this kills
 
 - The orchestrator reading 40 files "to understand" (scout's job).

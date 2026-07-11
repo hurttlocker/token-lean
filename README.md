@@ -54,12 +54,14 @@ curl -fsSL https://raw.githubusercontent.com/hurttlocker/token-lean/main/skills/
 
 Then invoke `/token-lean` at the start of any substantial session, or just say "keep it lean."
 
-**Claude Code — as a plugin:**
+**Claude Code — as a plugin (recommended — the ladder comes installed):**
 
 ```
 /plugin marketplace add hurttlocker/token-lean
 /plugin install token-lean@token-lean
 ```
+
+The plugin ships more than the skill text. You get the ladder as **real dispatchable agents** — `scout` (Haiku, read-only, 1KB-synthesis contract), `worker` (Sonnet, brief-in / report-out), `adjudicator` (panel judge) — plus a **tripwire hook** that nudges the orchestrator after 4 consecutive file reads (practice #1, mechanized instead of honor-system), and a [primitive-by-primitive mapping](skills/token-lean/references/claude-code.md) of every rung and practice to Claude Code's Agent/Workflow machinery. The skill-only install is the discipline; the plugin is the discipline with the equipment already racked.
 
 **Codex CLI:** paste the contents of `skills/token-lean/SKILL.md` (below the frontmatter) into your `AGENTS.md`.
 
