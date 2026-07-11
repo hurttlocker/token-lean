@@ -63,7 +63,17 @@ Then invoke `/token-lean` at the start of any substantial session, or just say "
 
 The plugin ships more than the skill text. You get the ladder as **real dispatchable agents** — `scout` (Haiku, read-only, 1KB-synthesis contract), `worker` (Sonnet, brief-in / report-out), `adjudicator` (panel judge) — plus a **tripwire hook** that nudges the orchestrator after 4 consecutive file reads (practice #1, mechanized instead of honor-system), and a [primitive-by-primitive mapping](skills/token-lean/references/claude-code.md) of every rung and practice to Claude Code's Agent/Workflow machinery. The skill-only install is the discipline; the plugin is the discipline with the equipment already racked.
 
-**Codex CLI:** paste the contents of `skills/token-lean/SKILL.md` (below the frontmatter) into your `AGENTS.md`.
+**Codex CLI — quick path:** paste the contents of `skills/token-lean/SKILL.md` (below the frontmatter) into your `AGENTS.md`.
+
+**Codex CLI — native equipment (recommended):**
+
+```bash
+mkdir -p ~/.agents/skills/token-lean ~/.codex
+cp -R skills/token-lean/. ~/.agents/skills/token-lean/
+cp codex/profiles/*.config.toml ~/.codex/
+```
+
+Restart Codex, load the discipline on demand with `$token-lean` or `/skills`, then dispatch the ladder with `codex exec -p scout "..."`, `-p worker`, or `-p builder`. Current Codex uses one `$CODEX_HOME/<name>.config.toml` file per profile; inline `[profiles.<name>]` blocks are legacy. See the [Codex CLI primitive mapping](skills/token-lean/references/codex-cli.md) for panels, effort rungs, compact hand-backs, and pre-digestion.
 
 **Cursor:** same content into `.cursorrules` or a project rule.
 
