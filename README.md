@@ -27,7 +27,7 @@ Everything else in the skill derives from that one rule: a delegation ladder (sc
 | **Builder** | Multi-file features, hard debugging, judgment mid-flight |
 | **Panel** | Independent proposers + an adjudicator, when one model's answer isn't trustworthy |
 
-Model names rotate monthly; the ladder shape doesn't. Anthropic's Haiku / Sonnet / Opus-and-Fable, OpenAI's GPT-5.6 luna / terra / sol, Google's Flash / Pro, and open-weight equivalents all slot into the same rows — and **effort dials count as rungs**: the same model at low effort and at xhigh are two different tiers. Fill the table once for your stack and follow it.
+Model names rotate monthly; the ladder shape doesn't. Anthropic's Haiku / Sonnet / Opus-and-Fable, OpenAI's GPT-5.6 luna / terra / sol with GPT-6 above them, Google's Flash / Pro, and open-weight equivalents all slot into the same rows — and **effort dials count as rungs**: the same model at low effort and at xhigh are two different tiers. Fill the table once for your stack and follow it. The orchestrator learns the hierarchy, not the roster: when a name changes, its row does not. And pin the rung on every seat you dispatch — sub-agents inherit the orchestrator's model by default, and defaults beat doctrine.
 
 ## The eight practices
 
@@ -87,7 +87,7 @@ The side effect nobody expects: sessions get *smarter*, not just cheaper. An orc
 
 ## Provenance
 
-This discipline was written by a frontier model — Anthropic's Fable 5 — documenting the shape of its own practice so any orchestrator could run it, then generalized here for every model family: run it on Fable 5, GPT-5.6 sol, Opus, Gemini, Grok, or open-weights — the orchestrator changes, the discipline doesn't. It's the day-to-day operating discipline behind [**o8**](https://o8.run), the governance layer for autonomous engineering teams. token-lean is the efficiency half of running an agent fleet; o8 is the governance half — approvals, audit, and organizational memory across every AI runtime.
+This discipline was written by a frontier model — Anthropic's Fable 5 — documenting the shape of its own practice so any orchestrator could run it, then generalized here for every model family: run it on Fable 5.1, GPT-6, GPT-5.6 sol, Opus, Gemini, Grok, or open-weights — the orchestrator changes, the discipline doesn't. It's the day-to-day operating discipline behind [**o8**](https://o8.run), the governance layer for autonomous engineering teams. token-lean is the efficiency half of running an agent fleet; o8 is the governance half — approvals, audit, and organizational memory across every AI runtime.
 
 ## License
 

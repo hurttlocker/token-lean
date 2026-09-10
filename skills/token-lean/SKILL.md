@@ -21,11 +21,13 @@ You are the orchestrator. Your context window is the most expensive surface in t
 | **Builder** (frontier tier) | Multi-file features, gnarly debugging, anything needing judgment mid-flight | A brief like a senior colleague gets: context, constraints, verification steps, report format |
 | **Panel** (multi-model) | Problems where one model's answer isn't trustworthy | 2–3 independent proposers + an adjudicator; proposers never see each other's drafts |
 
-**Map roles, not model names.** Every provider ships the same ladder shape — a scout-class, a worker-class, and a frontier-class model — and the names rotate monthly. As of mid-2026: Anthropic's Haiku / Sonnet / Opus-and-Fable, OpenAI's GPT-5.6 luna / terra / sol, Google's Flash / Pro, and open-weight equivalents all slot into the same rows. Whatever your stack, fill the table once and follow it.
+**Map roles, not model names.** Every provider ships the same ladder shape — a scout-class, a worker-class, and a frontier-class model — and the names rotate monthly. As of late 2026: Anthropic's Haiku / Sonnet / Opus-and-Fable, OpenAI's GPT-5.6 luna / terra / sol with GPT-6 above them, Google's Flash / Pro, and open-weight equivalents all slot into the same rows. Whatever your stack, fill the table once and follow it. The orchestrator must know the hierarchy, not the roster: when a name changes, the row it sits in does not.
 
 **Effort dials are rungs too.** The same model at low effort and at xhigh effort are two different tiers of the ladder. A frontier model at low effort is often the best scout you have; the max/ultra settings are for single decisions that genuinely demand them, never a default.
 
 **The orchestrator runs the ladder no matter how smart it is.** The failure mode is the frontier model doing scout-work and worker-work inline *because it can*. Being able to is not a reason to. Defaults are not limits either — judge the output, not the price tag, and escalate freely when a cheaper tier's output misses the bar.
+
+**Pin the rung on every seat.** Every delegation surface has a default model, and defaults beat doctrine. Sub-agent and workflow calls typically INHERIT the orchestrator's model unless you set one explicitly, so a "cheap panel" authored from a frontier orchestrator runs every seat at frontier price. The orchestrator's own model never runs in a sub-agent. Set the model (or profile) on every seat you dispatch, say which rung each seat runs at before you launch anything multi-agent, and read the usage that comes back — a panel reporting hundreds of thousands of sub-agent tokens is telling you something. Learned at 77% of a weekly limit.
 
 ## The eight practices
 

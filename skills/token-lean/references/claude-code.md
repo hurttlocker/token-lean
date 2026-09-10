@@ -8,7 +8,7 @@ The ladder and the eight practices map onto native Claude Code machinery. This f
 |---|---|
 | **Scout** | `Agent` tool with `subagent_type: "Explore"` (built-in, read-only), or this plugin's `scout` agent (Haiku, synthesis-only report contract). For one-off cheapness on any agent: `model: "haiku"`. |
 | **Worker** | This plugin's `worker` agent (Sonnet, brief-in / report-out), or `subagent_type: "general-purpose"` with `model: "sonnet"`. |
-| **Builder** | `general-purpose` agent with the model omitted — it inherits the session's frontier model. Give it the senior-colleague brief; run it in the background and wait for the report. |
+| **Builder** | `general-purpose` agent with the model PINNED to your builder tier (`model: "opus"` on Anthropic stacks) — never omitted, because an omitted model inherits the orchestrator's own, and the orchestrator's model never runs in a sub-agent. Give it the senior-colleague brief; run it in the background and wait for the report. |
 | **Panel** | The `Workflow` tool: fan out 2–3 proposer `agent()` calls in `parallel()` (proposers never see each other's drafts), then close with this plugin's `adjudicator` agent. Requires the user's opt-in for multi-agent orchestration. |
 
 **Effort dials as rungs:** the `Agent` tool and Workflow `agent()` calls accept an effort override (`'low' | 'medium' | 'high' | 'xhigh' | 'max'`). A frontier model at `low` is often your best scout; reserve `xhigh`/`max` for single decisions that demand them.
