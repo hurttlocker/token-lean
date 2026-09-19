@@ -40,6 +40,28 @@ You are the orchestrator. Your context window is the most expensive surface in t
 7. **Verify through agents, report facts.** Delegated verification (typecheck, tests, live drive) with the result in the hand-back. Never claim done without the verification tail. Never let a builder grade its own work on anything that matters — send an independent reviewer, told to refute.
 8. **Legislate, don't repeat.** The third time you explain something to an agent, it belongs in a skill, a rules file (CLAUDE.md / AGENTS.md), or your team's knowledge base. Rules written once are tokens saved forever.
 
+## Usage checkpoints and automatic adjustments
+
+At the start of substantial work and before a new fan-out or escalation, read the available
+account-usage snapshot and recent per-call receipts once. Reuse that snapshot during the batch;
+refresh after the batch or a quota/provider failure, not on every tool call. If usage is unavailable,
+mark it unknown and keep the normal bounded plan. Token totals do not establish remaining subscription
+capacity, and missing usage is never zero cost.
+
+Before dispatch, honor any operator-selected model and effort. Otherwise choose the cheapest proven
+rung for the task. Define its done condition and request a compact handback. Automatically narrow reads, batch independent lookups, reuse unchanged results,
+and replace repeated mechanical model decisions with code. A classifier belongs in the path only
+when a measured trial shows it replaces work or improves the completed result after its own cost.
+
+On quota or provider failure, preserve completed work and stop identical retries until the reset,
+provider recovery, or another meaningful condition changes. Use an already-authorized suitable
+alternative when available. Escalate after evidence of a quality failure; preserve the operator's
+chosen main model, reasoning setting, approval boundaries, and required verification.
+
+Judge efficiency by completed work, including retries and reviewer corrections. Record actual usage
+where available, keep estimates separate, and do not translate token reductions into an unsupported
+claim about weekly allowance saved. These are session instructions, not a background quota monitor.
+
 ## On Claude Code: the ladder is installed, not aspirational
 
 If this skill arrived as the Claude Code plugin, the rungs exist as real agents you can dispatch right now: `scout` (Haiku, read-only, synthesis-only report contract), `worker` (Sonnet, brief-in / report-out), and `adjudicator` (panel judge). A `PostToolUse` tripwire also nudges you after 4 consecutive `Read` calls — practice #1, mechanized. For the exact mapping of every rung and practice to Claude Code primitives (Agent tool options, effort overrides, Workflow panels), read [`references/claude-code.md`](references/claude-code.md) — once, then just use the calls.
